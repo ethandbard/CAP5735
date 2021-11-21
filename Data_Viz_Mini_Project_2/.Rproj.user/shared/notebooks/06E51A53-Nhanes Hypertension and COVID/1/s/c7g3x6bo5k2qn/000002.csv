@@ -1,0 +1,4 @@
+"0","```r
+nhanes <- nhanes %>% 
+  mutate(num_rx = seqn_counts$n)
+```"

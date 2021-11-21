@@ -1,0 +1,20 @@
+"0","```r
+data = read_csv(\"..\\data\\data_processed.csv\")
+```"
+"1","
+-- Column specification -------------------------------------------------------------------------------------------------------------------------
+cols(
+  .default = col_character(),
+  RIDAGEYR = col_double(),
+  SSD044 = col_double(),
+  LBDGLUSI = col_double(),
+  ALQ130 = col_double(),
+  DR1TKCAL = col_double(),
+  DR2TKCAL = col_double(),
+  DR1TTFAT = col_double(),
+  DR2TTFAT = col_double(),
+  calories = col_double(),
+  totalFat = col_double()
+)
+i Use `spec()` for the full column specifications.
+"

@@ -1,0 +1,67 @@
+"0","```r
+#Hypertension drug categories, individual level
+nhanes <- nhanes %>% 
+  mutate(ACE = 0) %>% 
+  mutate(CCB = 0) %>% 
+  mutate(BB = 0) %>% 
+  mutate(ARB = 0) %>% 
+  mutate(AB = 0) %>% 
+  mutate(other = 0) %>% 
+  mutate(diuretic = 0)
+
+#Count number of prescriptions per category, individual 
+# for (i in 1:dim(df)) {
+#   seqn = df$SEQN[i]
+#   if (df$hypertensive_rx[i] == \"ACE\" | df$hypertensive_rx2[i] == \"ACE\") {
+#     nhanes$ACE[nhanes$SEQN == seqn] <- nhanes$ACE[nhanes$SEQN == seqn] + 1
+#   }
+#   if (df$hypertensive_rx[i] == \"CCB\" | df$hypertensive_rx2[i] == \"CCB\") {
+#     nhanes$CCB[nhanes$SEQN == seqn] <- nhanes$CCB[nhanes$SEQN == seqn] + 1
+#   }
+#   if (df$hypertensive_rx[i] == \"BB\" | df$hypertensive_rx2[i] == \"BB\") {
+#     nhanes$BB[nhanes$SEQN == seqn] <- nhanes$BB[nhanes$SEQN == seqn] + 1
+#   }
+#   if (df$hypertensive_rx[i] == \"ARB\" | df$hypertensive_rx2[i] == \"ARB\") {
+#     nhanes$ARB[nhanes$SEQN == seqn] <- nhanes$ARB[nhanes$SEQN == seqn] + 1
+#   }
+#   if (df$hypertensive_rx[i] == \"AB\" | df$hypertensive_rx2[i] == \"AB\") {
+#     nhanes$AB[nhanes$SEQN == seqn] <- nhanes$ARB[nhanes$SEQN == seqn] + 1
+#   }  
+#   if (df$hypertensive_rx[i] == \"other\" | df$hypertensive_rx2[i] == \"other\") {
+#     nhanes$other[nhanes$SEQN == seqn] <- nhanes$other[nhanes$SEQN == seqn] + 1
+#   }
+#   if (df$hypertensive_rx[i] == \"diuretic\" | df$hypertensive_rx2[i] == \"diuretic\") {
+#     nhanes$diuretic[nhanes$SEQN == seqn] <- nhanes$diuretic[nhanes$SEQN == seqn] + 1
+#   }
+
+#Prescription Categories, factor, individual
+for (i in 1:dim(df)) {
+  seqn = df$SEQN[i]
+  
+  if (df$RXDRSC1[i] != \"I10\") {
+    next
+  }
+  
+  if (df$hypertensive_rx[i] == \"ACE\" | df$hypertensive_rx2[i] == \"ACE\") {
+    nhanes$ACE[nhanes$SEQN == seqn] <- 1
+  }
+  if (df$hypertensive_rx[i] == \"CCB\" | df$hypertensive_rx2[i] == \"CCB\") {
+    nhanes$CCB[nhanes$SEQN == seqn] <- 1
+  }
+  if (df$hypertensive_rx[i] == \"BB\" | df$hypertensive_rx2[i] == \"BB\") {
+    nhanes$BB[nhanes$SEQN == seqn] <-  1
+  }
+  if (df$hypertensive_rx[i] == \"ARB\" | df$hypertensive_rx2[i] == \"ARB\") {
+    nhanes$ARB[nhanes$SEQN == seqn] <-  1
+  }
+  if (df$hypertensive_rx[i] == \"AB\" | df$hypertensive_rx2[i] == \"AB\") {
+    nhanes$AB[nhanes$SEQN == seqn] <-  1
+  }  
+  if (df$hypertensive_rx[i] == \"other\" | df$hypertensive_rx2[i] == \"other\") {
+    nhanes$other[nhanes$SEQN == seqn] <-  1
+  }
+  if (df$hypertensive_rx[i] == \"diuretic\" | df$hypertensive_rx2[i] == \"diuretic\") {
+    nhanes$diuretic[nhanes$SEQN == seqn] <-  1
+  }
+}
+```"

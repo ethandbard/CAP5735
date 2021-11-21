@@ -1,0 +1,31 @@
+"0","```r
+unique(df$RIDRETH3)
+```"
+"1","[1] 4 3 1 2 6 7
+"
+"0","```r
+#code ethnicity variable
+df <- df %>% 
+  mutate(RIDRETH3 = case_when(
+    RIDRETH3 == 1 ~ \"Mexican American\",
+    RIDRETH3 == 2 ~ \"Other Hispanic\",
+    RIDRETH3 == 3 ~ \"Non-Hispanic White\",
+    RIDRETH3 == 4 ~ \"Non-Hispanic Black\",
+    RIDRETH3 == 6 ~ \"Non-Hispanic Asian\",
+    RIDRETH3 == 7 ~ \"Other\"
+  ))
+
+nhanes <- nhanes %>% 
+  mutate(RIDRETH3 = case_when(
+    RIDRETH3 == 1 ~ \"Mexican American\",
+    RIDRETH3 == 2 ~ \"Other Hispanic\",
+    RIDRETH3 == 3 ~ \"Non-Hispanic White\",
+    RIDRETH3 == 4 ~ \"Non-Hispanic Black\",
+    RIDRETH3 == 6 ~ \"Non-Hispanic Asian\",
+    RIDRETH3 == 7 ~ \"Other\"
+  ))
+
+#reduce df to only white and black
+df <- df %>% 
+  filter(RIDRETH3 == \"Non-Hispanic White\" | RIDRETH3 == \"Non-Hispanic Black\")
+```"

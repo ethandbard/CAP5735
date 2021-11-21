@@ -1,0 +1,11 @@
+"0","```r
+as.data.frame(table(rxq$RXDRSD1, rxq$RXDRSC1)) %>% 
+  arrange(-Freq) %>% 
+  head(15) %>% 
+  gt() %>% 
+  tab_header(
+    title = md(\"Top 15 ICD-10 2013-2018\")) %>%  
+  cols_label(Var1 = \"Description\",
+             Var2 = \"ICD-10\",
+             Freq = \"Count\")
+```"

@@ -1,0 +1,12 @@
+"0","```r
+#Black hypertension
+as.data.frame(table(df_black$age_group[df_black$RXDRSC1 == \"I10\"], df_black$hypertensive_rx[df_black$RXDRSC1 == \"I10\"])) %>% mutate(percent = percent(Freq / 2230)) %>% 
+  arrange(-Freq) %>% 
+  gt() %>% 
+  tab_header(
+    title = md(\"Hypertensive Drug Prevalence Non-Hispanic Black 2013-2018\"),
+    subtitle = md(\"N = 2230\")) %>%  
+  cols_label(Var1 = \"Age Group\",
+             Var2 = \"Drug\",
+             Freq = \"Count\")
+```"

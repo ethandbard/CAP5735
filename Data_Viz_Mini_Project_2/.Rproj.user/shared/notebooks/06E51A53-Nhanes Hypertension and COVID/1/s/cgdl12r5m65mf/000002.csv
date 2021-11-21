@@ -1,0 +1,12 @@
+"0","```r
+#Create age group categories
+nhanes <- nhanes %>% 
+  mutate(age_group = case_when(
+    RIDAGEYR <= 20 ~ \"20 and Under\",
+    RIDAGEYR >= 21 & RIDAGEYR <= 59 ~ \"20-59\",
+    RIDAGEYR >= 60 ~ \"60+\"
+  ))
+
+nhanes <- nhanes %>% 
+  filter(age_group != \"20 and Under\")
+```"

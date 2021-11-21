@@ -1,0 +1,4 @@
+"0","```r
+tbl_merge(tbls = list(MexicanAmericanHeartTbl, OtherHispanicHeartTbl, NonHispanicBlackHeartTbl, NonHispanicWhiteHeartTbl, allHeartTbl),
+          tab_spanner = c(\"Mexican American\", \"Other Hispanic\", \"Non-Hispanic Black\", \"Non-Hispanic White\", \"All\"))
+```"

@@ -1,0 +1,18 @@
+"0","```r
+as.data.frame(table(bp_black$ACE, bp_black$BB, bp_black$CCB, bp_black$ARB, bp_black$AB, bp_black$diuretic, bp_black$other)) %>% 
+  arrange(-Freq) %>% 
+  mutate(perc = percent(Freq / nrow(bp_black))) %>% 
+  gt() %>% 
+  tab_header(
+    title = \"Most Common Combinations of Drug Categories, Non-Hispanic Black\"
+  ) %>% 
+  cols_label(
+    Var1 = \"ACE\",
+    Var2 = \"BB\",
+    Var3 = \"CCB\",
+    Var4 = \"ARB\",
+    Var5 = \"AB\",
+    Var6 = \"diuretic\",
+    Var7 = \"other\"
+  )
+```"

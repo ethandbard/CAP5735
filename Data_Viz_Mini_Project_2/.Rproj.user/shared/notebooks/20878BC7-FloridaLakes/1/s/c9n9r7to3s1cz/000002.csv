@@ -1,0 +1,12 @@
+"0","p <- ggplot() + "
+"0","  geom_sf(data = polk_lake_shapes, aes(text = NAME, fill = Chlorophyll)) + "
+"0","  theme_minimal() + "
+"0","  ggtitle(""Polk County Lakes"") + "
+"0","  scale_fill_gradient(low = ""gray"", high = ""DarkGreen"")"
+"2","Warning:"
+"2"," Ignoring unknown aesthetics: text
+"
+"0","  "
+"0",""
+"0","p <- ggplotly(p)"
+"0","p"

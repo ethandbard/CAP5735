@@ -1,0 +1,18 @@
+"0","```r
+#Stroke Models
+
+#Mexican American
+MexicanAmericanStroke <- glm(MCQ160F ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = MexicanAmerican, family = \"binomial\")
+
+#Other Hispanic
+OtherHispanicStroke <- glm(MCQ160F ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + smoker, data = OtherHispanic, family = \"binomial\")
+
+#Non hispanic black
+NonHispanicBlackStroke <- glm(MCQ160F ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = NonHispanicBlack, family = \"binomial\")
+
+#non hispanic white
+NonHispanicWhiteStroke <- glm(MCQ160F ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = NonHispanicWhite, family = \"binomial\")
+
+#all
+dataStroke <- glm(MCQ160F ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = data, family = \"binomial\")
+```"

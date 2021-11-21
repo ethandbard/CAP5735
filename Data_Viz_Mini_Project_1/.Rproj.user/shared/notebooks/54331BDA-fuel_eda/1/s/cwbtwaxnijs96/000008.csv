@@ -1,0 +1,5 @@
+"0","ggsave(""images/fuel_cost.svg"", device = ""svg"")"
+"2","Saving 7.29 x 4.5 in image
+"
+"2","`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+"

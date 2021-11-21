@@ -1,0 +1,8 @@
+"0","#Prevalence of Manual/Automatic Transmissions by year"
+"0","transmission_counts <- fuel %>% "
+"0","  filter(!(class %in% ""Other"")) %>% "
+"0","  group_by(class2, year_group) %>% "
+"0","  count(transmission2) %>% "
+"0","  na.omit()"
+"0",""
+"0","transmission_counts"

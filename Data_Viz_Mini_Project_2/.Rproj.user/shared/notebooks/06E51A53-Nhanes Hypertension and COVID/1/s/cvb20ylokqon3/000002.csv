@@ -1,0 +1,26 @@
+"0","```r
+#Create categorical variable for hypertensive drugs
+rxq <- rxq %>% 
+  mutate(hypertensive_rx = case_when(
+    RXDDRUG1 %in% ACE ~ \"ACE\",
+    RXDDRUG1 %in% CCB ~ \"CCB\",
+    RXDDRUG1 %in% ARB ~ \"ARB\",
+    RXDDRUG1 %in% BB ~ \"BB\",
+    RXDDRUG1 %in% AB ~ \"AB\",
+    RXDDRUG1 %in% diuretic ~ \"diuretic\",
+    RXDDRUG1 == \"\" ~ \"\",
+    TRUE ~ \"other\"
+  ))
+
+rxq <- rxq %>% 
+  mutate(hypertensive_rx2 = case_when(
+    RXDDRUG2 %in% ACE ~ \"ACE\",
+    RXDDRUG2 %in% CCB ~ \"CCB\",
+    RXDDRUG2 %in% ARB ~ \"ARB\",
+    RXDDRUG2 %in% BB ~ \"BB\",
+    RXDDRUG1 %in% AB ~ \"AB\",
+    RXDDRUG2 %in% diuretic ~ \"diuretic\",
+    is.na(RXDDRUG2) ~ \"\",
+    TRUE ~ \"other\"
+  ))
+```"

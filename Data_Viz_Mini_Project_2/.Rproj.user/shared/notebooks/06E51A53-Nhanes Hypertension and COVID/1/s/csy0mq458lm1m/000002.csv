@@ -1,0 +1,10 @@
+"0","```r
+as.data.frame(table(rxq$hypertensive_rx[rxq$RXDRSC1 == \"I10\"])) %>% 
+  arrange(-Freq) %>% 
+  head(20) %>% 
+  gt() %>% 
+  tab_header(
+    title = md(\"Prevalence of Hypertensive Drug Categories 2013-2018\")) %>%  
+  cols_label(Var1 = \"Drug Category\",
+             Freq = \"Count\")
+```"

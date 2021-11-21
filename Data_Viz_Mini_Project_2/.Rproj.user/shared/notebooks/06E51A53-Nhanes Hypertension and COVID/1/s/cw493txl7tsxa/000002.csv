@@ -1,0 +1,11 @@
+"0","```r
+#run chi-sq test of independence
+i10_race_chi <- chisq.test(i10_race, correct = FALSE)
+i10_race_chi
+```"
+"1","
+	Pearson's Chi-squared test
+
+data:  i10_race
+X-squared = 21.733, df = 1, p-value = 3.134e-06
+"

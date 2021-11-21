@@ -1,0 +1,17 @@
+"0","```r
+#Drug Prevalence by cycle, white
+myDf <- as.data.frame(table(df_white$cycle[df_white$RXDRSC1 == \"I10\"], df_white$hypertensive_rx[df_white$RXDRSC1 == \"I10\"])) %>% 
+  arrange(Var1, -Freq) %>% 
+  mutate(n = case_when(
+    Var1 == \"2013-2014\" ~ nrow(filter(df_white, RXDRSC1 == \"I10\", cycle == \"2013-2014\")),
+    Var1 == \"2015-2016\" ~ nrow(filter(df_white, RXDRSC1 == \"I10\", cycle == \"2015-2016\")),
+    Var1 == \"2017-2018\" ~ nrow(filter(df_white, RXDRSC1 == \"I10\", cycle == \"2017-2018\"))
+  )) %>% 
+  mutate(perc = percent(round(Freq / n, 3)))
+
+myDf %>% 
+  gt() %>% 
+  tab_header(title = md(\"Hypertensive Drug Prevalence by Cycle, Non-Hispanic White\")) %>% 
+  cols_label(Var1 = \"Cycle\",
+             Var2 = \"Drug Category\")
+```"

@@ -1,0 +1,9 @@
+"0","```r
+as.data.frame(table(NonHispanicWhite$high.glucose, NonHispanicWhite$MCQ160E)) %>% 
+  mutate(Perc = paste0(round(Freq / nrow(NonHispanicWhite), 3) * 100, \"%\")) %>% 
+  arrange(-Freq) %>% 
+  gt() %>% 
+  tab_header(title = md(\"Glucose and Heart Attack Prevalence, White\")) %>% 
+  cols_label(Var1 = \"6.5+ mmol/L\",
+             Var2 = \"Had Heart Attack\")
+```"

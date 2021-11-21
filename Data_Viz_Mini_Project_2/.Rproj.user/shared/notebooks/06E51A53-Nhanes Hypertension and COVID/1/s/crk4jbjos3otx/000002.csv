@@ -1,0 +1,5 @@
+"0","```r
+df %>% 
+  select(c(SEQN, RXDRSC1, num_i10)) %>% 
+  filter(RXDRSC1 == \"I10\")
+```"

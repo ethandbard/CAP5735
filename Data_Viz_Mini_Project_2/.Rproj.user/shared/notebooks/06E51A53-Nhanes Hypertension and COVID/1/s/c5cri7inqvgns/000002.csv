@@ -1,0 +1,13 @@
+"0","```r
+#FOR THOSE WITH HYPERTENSION:
+
+#By race, how many people are covered by health insurance?
+as.data.frame(table(bp_white$HIQ011, bp_white$HIQ270)) %>% 
+  arrange(-Freq) %>% 
+  mutate(perc = paste0((round(Freq / nrow(bp_white) * 100, 2)),\"%\")) %>% 
+  filter(Var1 %in% c(1,2), Var2 %in% c(1,2)) %>% 
+  gt() %>% 
+  tab_header(title = md(\"Health Insurance and Prescription Coverage, White w/ hypertension\")) %>% 
+  cols_label(Var1 = \"Covered By Health Insurance\",
+             Var2 = \"Insurance Helps Pay for Rx\")
+```"

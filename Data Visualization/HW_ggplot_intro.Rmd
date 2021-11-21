@@ -1,0 +1,231 @@
+---
+title: "HW: Getting familiar with `ggplot2`"
+author: "Ethan Bard"
+output: html_notebook
+---
+
+Load the `tidyverse` package
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+
+# Problem 1
+
+You will use the `diamonds` dataset that comes with `ggplot2` (already loaded when you use `library(tidyverse`)). You can explore the dataset by using the function `str()`:
+
+```{r}
+str(diamonds)
+```
+
+
+
+(a) Create a bar-plot using `geom_bar()`, mapping the `clarity` to the `x` aesthetic, and `cut` to the `fill` aesthetic. What do you notice? 
+
+```{r}
+diamonds %>% 
+  ggplot(aes(x = clarity, fill = cut)) +
+  geom_bar()
+```
+
+By inspecting this bar chart, it is clear that there is a higher proportion of `'Ideal'` cut diamonds across all clarities. Additionally, the two most popular clarities are `SI1` and `VS2`.  
+
+(b) What happens if you use the option `position = "fill"` in the plot above?
+
+```{r}
+diamonds %>% 
+  ggplot(aes(x = clarity, fill = cut)) +
+  geom_bar(position = "fill")
+```
+
+Using the option `position = "fill"`, the bars are viewed as a proportion of total rather than a comparison of frequency. It becomes even more clear that the `ideal` cut is the most popular in this dataset. 
+
+# Problem 2
+
+In this problem you will use the `midwest` dataset, also available with the `ggplot2` package. The data comes from the 2000 US Census. Learn more about the `midwest` dataset here
+
+```{r}
+summary(midwest)
+```
+
+
+(a) Create a scatterplot showing the relationship between the variables `area` (in the horizontal axis) and `poptotal` (in the vertical axis)
+
+```{r}
+midwest %>% 
+  ggplot(aes(x = area, y = poptotal)) + 
+  geom_point()
+```
+
+
+(b) Color your points based on the variable `state` (information on 5 different states is included in this dataset). Additionally, size your points based on the variable `popdensity`. Do any points stand out from the rest?
+
+```{r}
+midwest %>% 
+  ggplot(aes(x = area, y = poptotal, color = state, size = popdensity)) + 
+  geom_point()
+```
+
+A few points stand out from the majority, most significantly being the one point at the top of the chart belonging to `IL`. 
+
+
+(c) Use the `labs()` layers to add a title and caption, and edit the x-label and y-label.
+
+```{r}
+midwest %>% 
+  ggplot(aes(x = area, y = poptotal, color = state, size = popdensity)) + 
+  geom_point() +
+  labs(title = "Midwest Counties",
+       caption = "Area Vs. Population Total, colored by state and sized by density.",
+       y = "Population Total",
+       x = "Area")
+```
+
+(d) How would you limit the range of the variables `area` to the interval $[0, 0.1]$ and `poptotal` to $[0, 500000]$.? Comment on your results. 
+
+```{r}
+midwest %>% 
+  filter(area <= 0.1, poptotal <= 500000) %>% 
+  ggplot(aes(x = area, y = poptotal, color = state, size = popdensity)) + 
+  geom_point() +
+  labs(title = "Midwest Counties",
+       caption = "Area Vs. Population Total, colored by state and sized by density.",
+       y = "Population Total",
+       x = "Area")
+```
+
+```{r}
+midwest %>% 
+  ggplot(aes(x = area, y = poptotal, color = state, size = popdensity)) + 
+  geom_point()
+```
+Using the `filter` function before piping into `ggplot`, the records plotted fit within the specified range. 
+
+(e) Create a plot to explore the answer to the question: _Is there a relationship between percent of population below the poverty level (`percbelowpoverty`) and the type of area (`inmetro`)?_ 
+
+```{r}
+midwest %>% 
+  ggplot(aes(x = factor(inmetro), y = percbelowpoverty)) +
+  geom_boxplot()
+```
+
+The boxplot above suggests that counties where `inmetro == 0` have a higher `percbelowpoverty` on average, and both the 1st and 3rd quartiles are placed higher than the corresponding values where `intmetro == 1`. Additionally, there are more outliers present where `inmetro == 0`. Loosely, this visualization would suggest that counties that are not in metro have a higher percentage of people below the poverty line. 
+
+# Problem 3
+
+Load the `gapminder` package 
+
+```{r}
+library(gapminder)
+```
+
+```{r}
+summary(gapminder)
+```
+
+
+> if you have not installed this yet, make sure you install it, by typing `install.packages("gapminder")` in the `Console`, or using the `Install` button in the `Packages` tab in RStudio
+
+
+(a) Recreate the scatterplot (with the linear fit) shown in [Figure 3.13](https://socviz.co/makeplot.html#makeplot) of Kieran Healy's Data Visualization book:
+
+```{r, echo = F, warning=FALSE, fig.align='center'}
+knitr::include_graphics("https://socviz.co/dataviz-pdfl_files/figure-html4/ch-03-fig-lexp-gdp-10-1.png")
+```
+
+```{r}
+#derived from textbook
+p <- ggplot(data = gapminder, mapping = aes(x = gdpPercap, y=lifeExp))
+p + geom_point(alpha = 0.3) +
+    geom_smooth(method = "lm") +
+    scale_x_log10(labels = scales::dollar) +
+    labs(x = "GDP Per Capita", y = "Life Expectancy in Years",
+         title = "Economic Growth and Life Expectancy",
+         subtitle = "Data points are country-years",
+         caption = "Source: Gapminder.")
+```
+
+
+(b)  Is the figure above the best way to display this country-year data? What are we gaining and losing by ignoring the temporal and country-level structure of the data? 
+
+I think that this is a reasonably effective display of this country-year data when trying to evaluate how GDP Per Capita affects Life Expectancy. We can see that there is a strong positive trend in this format, but one major aspect we are losing by ignoring the temporal aspect is that some countries may have been increasing Life Expectancy over time for reason(s) unrelated to GDP Per Capita, so that information is lost here. 
+
+(c) Pick 6 countries of your choice included in the `gapminder` dataset. Create a plot with life expectancy in years in the vertical axis, and GDP per capita in the horizontal axes. For each country include a regression line (`method = "lm"` in `geom_smooth()`). _Comment on your results._ 
+
+```{r}
+unique(gapminder$country)
+```
+
+
+```{r}
+countries <- c("United States", "Canada", "China", "Japan", "Sweden", "South Africa")
+```
+
+```{r}
+p <- ggplot(data = filter(gapminder, country %in% countries), mapping = aes(x = gdpPercap, y=lifeExp))
+p + geom_point(alpha = 0.3) +
+    facet_wrap(~country) +
+    geom_smooth(method = "lm") +
+    scale_x_log10(labels = scales::dollar) +
+    labs(x = "GDP Per Capita", y = "Life Expectancy in Years",
+         title = "Economic Growth and Life Expectancy",
+         subtitle = "Data points are country-years",
+         caption = "Source: Gapminder.")
+```
+
+After splitting up the visualization by my six selected countries, all are still showing a similar trend as presented previously. In each country, Life Expectancy appears to increase as GDP Per Capita increases. Additionally, it is easier to see how each individual country's GDP and Life Expectancy change over time. 
+
+
+# Problem 4
+
+In this problem, you will use the `BostonHousing.csv` dataset available [here](https://github.com/reisanar/datasets/blob/master/BostonHousing.csv). It contains information concerning housing in the area of Boston, Massachusetts. The dataset includes information on 506 census housing tracts in the Boston area. 
+
+
+
+  Variables |  Description
+------------|----------------------------------------------------------------
+`CRIM`      | Crime rate
+`ZN`        | Percentage of residential land zoned for lots over 25,000 ft2
+`INDUS`     | Percentage of land occupied by non-retail business
+`CHAS`      | Does tract bound Charles River (`= 1` if tract bounds river, `= 0` otherwise)
+`NOX`       | Nitric oxide concentration (parts per 10 million)
+`RM`        | Average number of rooms per dwelling
+`AGE`       | Percentage of owner-occupied units built prior to 1940
+`DIS`       | Weighted distances to five Boston employment centers
+`RAD`       | Index of accessibility to radial highways
+`TAX`       | Full-value property tax rate per $10,000
+`PTRATIO`   | Pupil-to-teacher ratio by town
+`LSTAT`     | Percentage of lower status of the population
+`MEDV`      | Median value of owner-occupied homes in $1000s
+`CAT_MEDV`  | Is median value of owner-occupied homes in tract above $30,000 (`CAT.MEDV = 1`) or not (`CAT_MEDV = 0`)
+
+(a) Read the dataset and produce _at least one_ data summary of it (e.g. what is the variance and mean of every numerical attribute available?, what is the correlation between `PTRATIO` and `MEDV`?, etc.)
+
+
+
+
+```{r, message=FALSE, warning = FALSE}
+# read the data
+housing <- read_csv("https://raw.githubusercontent.com/reisanar/datasets/master/BostonHousing.csv")
+```
+
+```{r}
+library(vtable)
+st(housing, out = "kable")
+```
+
+
+(b) Produce one data visualization to explore this dataset. Comment on your results.
+
+```{r}
+housing %>% 
+  ggplot(aes(x = LSTAT, y = CRIM)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+The simple visualization above plots the relationship between `LSTAT` and `CRIM`, or percent lower status of the population vs. per capita crime rate by down. The linear regression line suggests there may be a positive relationship between these two variables.  
+
+
+

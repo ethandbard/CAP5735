@@ -1,0 +1,7 @@
+"0","houses %>% "
+"0","  ggplot(aes(x = REMODEL, y = TOTAL_VALUE)) +"
+"0","  geom_boxplot() + "
+"0","  theme_minimal() +"
+"0","  ylab(""Total Value (Thousands)"") + "
+"0","  xlab("""") +"
+"0","  ggtitle(""West Roxbury Housing Prices by Remodel Status"")"

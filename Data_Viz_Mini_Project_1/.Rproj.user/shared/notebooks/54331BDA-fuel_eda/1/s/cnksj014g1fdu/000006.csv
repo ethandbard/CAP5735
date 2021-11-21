@@ -1,0 +1,9 @@
+"0","fuel %>% "
+"0","  ggplot() +"
+"0","  geom_histogram(aes(x = combined_mpg_ft1)) + "
+"0","  theme_minimal() + "
+"0","  xlab(""MPG"") + "
+"0","  ylab(""Count"") + "
+"0","  ggtitle(""Distribution of Fuel Efficiency (MPG)"")"
+"2","`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+"

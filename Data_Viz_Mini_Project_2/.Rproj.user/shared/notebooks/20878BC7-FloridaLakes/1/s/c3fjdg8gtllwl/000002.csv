@@ -1,0 +1,5 @@
+"0","polk_lakes <- filter(lake_shapes, COUNTY == ""POLK"")"
+"0",""
+"0","polk_lakes$NAME <- removeWords(polk_lakes$NAME, c(""Lake "", "" Lake""))"
+"0","lakes <- lakes %>% "
+"0","  mutate(NAME = Lake)"

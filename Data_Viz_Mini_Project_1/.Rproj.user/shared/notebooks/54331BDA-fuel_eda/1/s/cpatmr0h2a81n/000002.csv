@@ -1,0 +1,3 @@
+"0","#filter special purpose and sport utility vehicles from dataset"
+"0","fuel <- fuel %>% "
+"0","  filter(!(class %in% c(""Special Purpose Vehicle 4WD"", ""Special Purpose Vehicles"", ""Special Purpose Vehicles/4wd"", ""Special Purpose Vehicle 2WD"", ""Special Purpose Vehicles/2wd"", ""Special Purpose Vehicle"", ""Small Sport Utility Vehicle 4WD"", ""Standard Sport Utility Vehicle 2WD"", ""Sport Utility Vehicle - 4WD"", ""Small Sport Utility Vehicle 2WD"", ""Sport Utility Vehicle - 2WD"", ""Standard Sport Utility Vehicle 4WD""))) "

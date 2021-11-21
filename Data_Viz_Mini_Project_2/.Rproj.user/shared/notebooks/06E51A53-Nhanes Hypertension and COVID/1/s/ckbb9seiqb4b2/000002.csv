@@ -1,0 +1,23 @@
+"0","```r
+demo18 <- foreign::read.xport(\"../2017-2018/DEMO_J.XPT\")
+demo18 <- demo18[(c(\"SEQN\", \"RIAGENDR\", \"RIDAGEYR\", \"RIDRETH3\"))]
+
+mcq18 <- foreign::read.xport(\"../2017-2018/MCQ_J.XPT\")
+mcq18 <- mcq18[(c(\"SEQN\", \"MCQ160C\", \"MCQ160D\", \"MCQ160E\", \"MCQ160F\"))]
+
+bpq18 <- foreign::read.xport(\"../2017-2018/BPQ_J.XPT\")
+bpq18 <- bpq18[c(\"SEQN\", \"BPQ020\", \"BPQ050A\", \"BPQ080\", \"BPQ100D\", \"BPQ040A\")]
+
+rxq18 <- foreign::read.xport(\"../2017-2018/RXQ_RX_J.XPT\")
+rxq18  <- rxq18[c(\"SEQN\",\"RXDUSE\",\"RXDDRUG\",\"RXDRSC1\",\"RXDRSC2\", \"RXDRSC3\", \"RXDRSD1\", \"RXDRSD2\", \"RXDRSD3\")]
+rxq18 <- rxq18 %>% 
+  mutate(cycle = \"2017-2018\")
+
+hiq18 <- foreign::read.xport(\"../2017-2018/HIQ_J.XPT\")
+hiq18 <- hiq18[c(\"SEQN\", \"HIQ011\", \"HIQ270\")]
+
+nhanes18 <- left_join(demo18, mcq18, by = \"SEQN\")
+nhanes18 <- left_join(nhanes18, bpq18, by = \"SEQN\")
+nhanes18 <- left_join(nhanes18, hiq18, by = \"SEQN\")
+#nhanes18 <- left_join(x = nhanes18, y = rxq18, by = \"SEQN\", copy = FALSE)
+```"

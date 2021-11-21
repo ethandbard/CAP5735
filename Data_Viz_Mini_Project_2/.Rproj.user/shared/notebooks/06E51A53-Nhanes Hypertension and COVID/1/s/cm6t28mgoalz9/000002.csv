@@ -1,0 +1,4 @@
+"0","```r
+nhanes %>% 
+  filter(RXDUSE_n == 1 & RIDRETH3 == \"Non-Hispanic White\" & num_i10 >= 1) %>% count()
+```"

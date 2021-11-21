@@ -1,0 +1,93 @@
+"0","glimpse(fuel)"
+"1","Rows: 38,113"
+"1",""
+"1","
+"
+"1","Columns: 81"
+"1",""
+"1","
+"
+"1","$ vehicle_id                        [3m[38;5;246m<dbl>[39m[23m 26587, 27705, 26561, 27681, 27550, 28426, 27549, 28425, 27593, 28455, 27591, 2~
+$ year                              [3m[38;5;246m<dbl>[39m[23m 1984, 1984, 1984, 1984, 1984, 1984, 1984, 1984, 1984, 1984, 1984, 1984, 1984, ~
+$ make                              [3m[38;5;246m<chr>[39m[23m ""Alfa Romeo"", ""Alfa Romeo"", ""Alfa Romeo"", ""Alfa Romeo"", ""AM General"", ""AM Gene~
+$ model                             [3m[38;5;246m<chr>[39m[23m ""GT V6 2.5"", ""GT V6 2.5"", ""Spider Veloce 2000"", ""Spider Veloce 2000"", ""DJ Po V~
+$ class                             [3m[38;5;246m<chr>[39m[23m ""Minicompact Cars"", ""Minicompact Cars"", ""Two Seaters"", ""Two Seaters"", ""Special~
+$ drive                             [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""2-Wheel Drive"", ""2-Wheel Drive"", ""2-Wheel Drive"", ""2-Wheel Dr~
+$ transmission                      [3m[38;5;246m<chr>[39m[23m ""Manual 5-Speed"", ""Manual 5-Speed"", ""Manual 5-Speed"", ""Manual 5-Speed"", ""Autom~
+$ transmission_type                 [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ engine_index                      [3m[38;5;246m<dbl>[39m[23m 9001, 9005, 9002, 9006, 1830, 1880, 1831, 1881, 1524, 1574, 1405, 1504, 1455, ~
+$ engine_descriptor                 [3m[38;5;246m<chr>[39m[23m ""(FFS)"", ""(FFS) CA model"", ""(FFS)"", ""(FFS) CA model"", ""(FFS)"", ""(FFS) CA model~
+$ engine_cylinders                  [3m[38;5;246m<dbl>[39m[23m 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 4, 6, 4, 6, 4, 6, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, ~
+$ engine_displacement               [3m[38;5;246m<dbl>[39m[23m 2.5, 2.5, 2.0, 2.0, 2.5, 2.5, 4.2, 4.2, 4.2, 4.2, 2.5, 4.2, 2.5, 4.2, 2.5, 4.2~
+$ turbocharger                      [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ supercharger                      [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ fuel_type                         [3m[38;5;246m<chr>[39m[23m ""Regular"", ""Regular"", ""Regular"", ""Regular"", ""Regular"", ""Regular"", ""Regular"", ""~
+$ fuel_type_1                       [3m[38;5;246m<chr>[39m[23m ""Regular Gasoline"", ""Regular Gasoline"", ""Regular Gasoline"", ""Regular Gasoline""~
+$ fuel_type_2                       [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ city_mpg_ft1                      [3m[38;5;246m<dbl>[39m[23m 17, 17, 18, 18, 18, 18, 13, 13, 15, 15, 19, 16, 19, 15, 19, 16, 16, 17, 16, 17~
+$ unrounded_city_mpg_ft1            [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ city_mpg_ft2                      [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ unrounded_city_mpg_ft2            [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ city_gasoline_consumption_cd      [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ city_electricity_consumption      [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ city_utility_factor               [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ highway_mpg_ft1                   [3m[38;5;246m<dbl>[39m[23m 24, 24, 25, 25, 17, 17, 13, 13, 20, 19, 22, 20, 22, 20, 23, 22, 22, 21, 20, 21~
+$ unrounded_highway_mpg_ft1         [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ highway_mpg_ft2                   [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ unrounded_highway_mpg_ft2         [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ highway_gasoline_consumption_cd   [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ highway_electricity_consumption   [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ highway_utility_factor            [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ unadjusted_city_mpg_ft1           [3m[38;5;246m<dbl>[39m[23m 21, 21, 23, 23, 22, 22, 16, 16, 19, 19, 24, 20, 24, 19, 24, 20, 20, 21, 20, 21~
+$ unadjusted_highway_mpg_ft1        [3m[38;5;246m<dbl>[39m[23m 34, 34, 35, 35, 24, 24, 18, 18, 27, 26, 30, 27, 30, 27, 32, 30, 30, 29, 28, 29~
+$ unadjusted_city_mpg_ft2           [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ unadjusted_highway_mpg_ft2        [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ combined_mpg_ft1                  [3m[38;5;246m<dbl>[39m[23m 20, 20, 21, 21, 17, 17, 13, 13, 17, 17, 20, 17, 20, 17, 21, 18, 18, 18, 18, 18~
+$ unrounded_combined_mpg_ft1        [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ combined_mpg_ft2                  [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ unrounded_combined_mpg_ft2        [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ combined_electricity_consumption  [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ combined_gasoline_consumption_cd  [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ combined_utility_factor           [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ annual_fuel_cost_ft1              [3m[38;5;246m<dbl>[39m[23m 1750, 1750, 1650, 1650, 2050, 2050, 2700, 2700, 2050, 2050, 1750, 2050, 1750, ~
+$ annual_fuel_cost_ft2              [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ gas_guzzler_tax                   [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ save_or_spend_5_year              [3m[38;5;246m<dbl>[39m[23m -2000, -2000, -1500, -1500, -3500, -3500, -6750, -6750, -3500, -3500, -2000, -~
+$ annual_consumption_in_barrels_ft1 [3m[38;5;246m<dbl>[39m[23m 16.48050, 16.48050, 15.69571, 15.69571, 19.38882, 19.38882, 25.35462, 25.35462~
+$ annual_consumption_in_barrels_ft2 [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ tailpipe_co2_ft1                  [3m[38;5;246m<dbl>[39m[23m -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1~
+$ tailpipe_co2_in_grams_mile_ft1    [3m[38;5;246m<dbl>[39m[23m 444.3500, 444.3500, 423.1905, 423.1905, 522.7647, 522.7647, 683.6154, 683.6154~
+$ tailpipe_co2_ft2                  [3m[38;5;246m<dbl>[39m[23m -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1~
+$ tailpipe_co2_in_grams_mile_ft2    [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ fuel_economy_score                [3m[38;5;246m<dbl>[39m[23m -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1~
+$ ghg_score                         [3m[38;5;246m<dbl>[39m[23m -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1~
+$ ghg_score_alt_fuel                [3m[38;5;246m<dbl>[39m[23m -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1~
+$ my_mpg_data                       [3m[38;5;246m<chr>[39m[23m ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N"", ""N""~
+$ x2d_passenger_volume              [3m[38;5;246m<dbl>[39m[23m 74, 74, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0~
+$ x2d_luggage_volume                [3m[38;5;246m<dbl>[39m[23m 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ x4d_passenger_volume              [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ x4d_luggage_volume                [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ hatchback_passenger_volume        [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ hatchback_luggage_volume          [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ start_stop_technology             [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ alternative_fuel_technology       [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ electric_motor                    [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ manufacturer_code                 [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ gasoline_electricity_blended_cd   [3m[38;5;246m<lgl>[39m[23m FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~
+$ vehicle_charger                   [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ alternate_charger                 [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ hours_to_charge_120v              [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ hours_to_charge_240v              [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ hours_to_charge_ac_240v           [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ composite_city_mpg                [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ composite_highway_mpg             [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ composite_combined_mpg            [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ range_ft1                         [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ city_range_ft1                    [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ highway_range_ft1                 [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ range_ft2                         [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ city_range_ft2                    [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+$ highway_range_ft2                 [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~"
+"1",""
+"1","
+"

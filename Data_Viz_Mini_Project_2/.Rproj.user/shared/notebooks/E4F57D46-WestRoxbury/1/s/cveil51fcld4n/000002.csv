@@ -1,0 +1,39 @@
+"0","library(tidyverse)"
+"0","library(broom)"
+"0","library(plotly)"
+"0","library(GGally)"
+"2","Registered S3 method overwritten by 'GGally':
+  method from   
+  +.gg   ggplot2
+"
+"0","library(kableExtra)"
+"2","
+Attaching package: ‘kableExtra’
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    group_rows
+
+"
+"0","library(magick)"
+"2","Linking to ImageMagick 6.9.12.3
+Enabled features: cairo, freetype, fftw, ghostscript, heic, lcms, pango, raw, rsvg, webp
+Disabled features: fontconfig, x11
+"
+"0","library(webshot)"
+"0","webshot::install_phantomjs()"
+"2","It seems that the version of `phantomjs` installed is greater than or equal to the requested version.To install the requested version or downgrade to another version, use `force = TRUE`.
+"
+"0","houses <- read_csv(""../data/WestRoxbury.csv"")"
+"1","[1m[1mRows: [1m[22m[34m[34m5802[34m[39m [1m[1mColumns: [1m[22m[34m[34m14[34m[39m
+"
+"1","[36m--[39m [1m[1mColumn specification[1m[22m [36m------------------------------------------------------------------------------------------------------------[39m
+[1mDelimiter:[22m "",""
+[31mchr[39m  (1): REMODEL
+[32mdbl[39m (13): TOTAL VALUE, TAX, LOT SQFT, YR BUILT, GROSS AREA, LIVING AREA, FLOORS, ROOMS, BEDROOMS, FULL BATH, HALF BATH, KITCHEN,...
+"
+"1","
+[36mi[39m Use [38;5;251m[48;5;235m[38;5;251m[48;5;235m`spec()`[48;5;235m[38;5;251m[49m[39m to retrieve the full column specification for this data.
+[36mi[39m Specify the column types or set [38;5;251m[48;5;235m[38;5;251m[48;5;235m`show_col_types = FALSE`[48;5;235m[38;5;251m[49m[39m to quiet this message.
+"

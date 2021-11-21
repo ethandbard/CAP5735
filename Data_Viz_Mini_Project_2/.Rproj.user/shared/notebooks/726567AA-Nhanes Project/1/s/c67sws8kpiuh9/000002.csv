@@ -1,0 +1,14 @@
+"0","```r
+#Create filtered datasets by ethnic group
+#Mexican American
+MexicanAmerican <- data %>% filter(RIDRETH1 == \"Mexican American\")
+
+#Other Hispanic
+OtherHispanic <- data %>% filter(RIDRETH1 == \"Other Hispanic\")
+
+#NonHispanicBlack
+NonHispanicBlack <- data %>%  filter(RIDRETH1 == \"Non-Hispanic black\")
+
+#Non hispanic white
+NonHispanicWhite <- data %>% filter(RIDRETH1 == \"Non-Hispanic white\")
+```"

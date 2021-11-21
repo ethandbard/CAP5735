@@ -1,0 +1,17 @@
+"0","```r
+#people who have been told they had hypertension, bpq020 = 1
+bp <- nhanes %>% 
+  filter(BPQ020 == 1) %>% 
+  mutate(BPQ050A = case_when(
+    BPQ050A == 1 ~ \"Yes\",
+    BPQ050A == 2 ~ \"No\",
+    BPQ050A == 7 ~ \"Refused\",
+    BPQ050A == 9 ~ \"Don't Know\"
+  ))
+
+bp_white <- bp %>% 
+  filter(RIDRETH3 == \"Non-Hispanic White\")
+
+bp_black <- bp %>% 
+  filter(RIDRETH3 == \"Non-Hispanic Black\")
+```"

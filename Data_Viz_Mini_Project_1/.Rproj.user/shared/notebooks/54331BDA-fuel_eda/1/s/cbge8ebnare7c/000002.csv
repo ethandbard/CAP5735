@@ -1,0 +1,14 @@
+"0","#Read Fuel CSV from Dr. Sanchez"
+"0","fuel <- read_csv(""https://raw.githubusercontent.com/reisanar/datasets/master/fuel.csv"")"
+"1","[1m[1mRows: [1m[22m[34m[34m38113[34m[39m [1m[1mColumns: [1m[22m[34m[34m81[34m[39m
+"
+"1","[36m--[39m [1m[1mColumn specification[1m[22m [36m--------------------------------------------------------------------------------------------------[39m
+[1mDelimiter:[22m "",""
+[31mchr[39m (11): make, model, class, drive, transmission, transmission_type, engine_descriptor, fuel_type, fuel_type_1, my_mp...
+[32mdbl[39m (59): vehicle_id, year, engine_index, engine_cylinders, engine_displacement, city_mpg_ft1, unrounded_city_mpg_ft1,...
+[33mlgl[39m (11): turbocharger, supercharger, fuel_type_2, gas_guzzler_tax, start_stop_technology, electric_motor, manufacture...
+"
+"1","
+[36mi[39m Use [38;5;251m[48;5;235m[38;5;251m[48;5;235m`spec()`[48;5;235m[38;5;251m[49m[39m to retrieve the full column specification for this data.
+[36mi[39m Specify the column types or set [38;5;251m[48;5;235m[38;5;251m[48;5;235m`show_col_types = FALSE`[48;5;235m[38;5;251m[49m[39m to quiet this message.
+"

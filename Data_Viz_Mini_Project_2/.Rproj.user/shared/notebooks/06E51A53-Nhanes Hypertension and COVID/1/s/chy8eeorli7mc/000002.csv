@@ -1,0 +1,10 @@
+"0","```r
+ggplot(data = myDf, aes(x = reorder(Var2, -Freq), y = Freq)) +
+  geom_bar(stat = \"identity\", fill = \"#532d8e\") + 
+  facet_wrap(~Var1) + 
+  theme_minimal() + 
+  xlab(\"\") +
+  ylab(\"Count\") +
+  geom_text(aes(label = Percent), vjust = -0.3, size = 3.5) + 
+  scale_fill_brewer(palette = \"Pastel1\")
+```"

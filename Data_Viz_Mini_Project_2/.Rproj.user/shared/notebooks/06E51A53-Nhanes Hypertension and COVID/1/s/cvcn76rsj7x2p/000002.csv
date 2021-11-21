@@ -1,0 +1,23 @@
+"0","```r
+#Reevaluate number of I10 prescriptions per individual, split into 1 vs multiple
+nhanes <- nhanes %>% 
+  mutate(I10 = case_when(
+    num_i10 == 1 ~ \"One\",
+    num_i10 > 1 ~ \"More Than One\",
+    is.na(num_i10) == TRUE ~ \"None\"
+  ))
+
+myDf <- nhanes %>% 
+  filter(RIDRETH3 %in% c(\"Non-Hispanic White\", \"Non-Hispanic Black\"), I10 %in% c(\"One\", \"More Than One\"))
+
+myDf <- as.data.frame(table(myDf$RIDRETH3, myDf$I10)) %>% 
+  arrange(-Freq) %>% 
+  group_by(Var1) %>% 
+  mutate(Percent = percent(Freq / sum(Freq)))
+
+myDf %>% 
+  gt() %>% 
+  cols_label(Var1 = \"Ethnicity\",
+             Var2 = \"Num I10\") %>% 
+  tab_header(title = \"Number of I10 Prescriptions Per Individual\")
+```"

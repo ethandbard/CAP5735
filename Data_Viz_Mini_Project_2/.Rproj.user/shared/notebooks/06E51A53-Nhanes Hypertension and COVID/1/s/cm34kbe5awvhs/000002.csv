@@ -1,0 +1,8 @@
+"0","```r
+#number of i10 drugs per individual
+num_i10 <- df %>% 
+  select(c(SEQN, RXDUSE, RXDRSC1)) %>% 
+  group_by(SEQN, RXDRSC1) %>% 
+  filter(RXDRSC1 == \"I10\") %>% 
+  count()
+```"

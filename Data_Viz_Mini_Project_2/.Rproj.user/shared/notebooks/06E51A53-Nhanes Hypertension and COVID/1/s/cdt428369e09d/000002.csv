@@ -1,0 +1,7 @@
+"0","```r
+#For I10, max is 7.
+rxq %>% 
+  group_by(SEQN, RXDRSC1) %>% 
+  count() %>% 
+  arrange(desc(n))
+```"

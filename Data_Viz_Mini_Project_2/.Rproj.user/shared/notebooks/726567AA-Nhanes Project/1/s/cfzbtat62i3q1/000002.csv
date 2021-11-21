@@ -1,0 +1,14 @@
+"0","```r
+#set categorical variables as factors
+data$RIAGENDR <- factor(data$RIAGENDR)
+data$RIDRETH1 <- factor (data$RIDRETH1)
+data$ageGroup <- factor(data$ageGroup)
+data$attendance <- factor(data$attendance)
+#data$attendance2 <- factor(data$attendance2)
+data$`education..12yr.` <- factor(data$education..12yr.)
+data$married <- factor(data$married, levels = c(\"Single\", \"Married\"))
+data$mobilityLimitation <- factor(data$mobilityLimitation)
+data$poorHealth <- factor(data$poorHealth)
+data$hypertension <- factor(data$hypertension)
+data$smoker <- factor(data$smoker)
+```"

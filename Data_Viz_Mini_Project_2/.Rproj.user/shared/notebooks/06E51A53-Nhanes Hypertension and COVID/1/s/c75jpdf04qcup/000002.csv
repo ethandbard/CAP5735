@@ -1,0 +1,9 @@
+"0","```r
+#confirm expected counts assumption
+chisq.test(i10_race)$expected
+```"
+"1","               
+                Non-Hispanic Black Non-Hispanic White
+  More Than One           544.2948           737.7052
+  One                     803.7052          1089.2948
+"

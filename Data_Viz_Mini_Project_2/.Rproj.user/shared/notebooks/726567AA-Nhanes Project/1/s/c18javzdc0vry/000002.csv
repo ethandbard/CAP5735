@@ -1,0 +1,4 @@
+"0","```r
+data <- data %>% 
+  rename_all(make.names)
+```"

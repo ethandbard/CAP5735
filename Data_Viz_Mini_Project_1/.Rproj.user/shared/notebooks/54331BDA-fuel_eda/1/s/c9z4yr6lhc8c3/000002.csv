@@ -1,0 +1,6 @@
+"0","#Condense transmission to fewer categories (manual / auto)"
+"0","fuel <- fuel %>% "
+"0","  mutate(transmission2 = case_when("
+"0","    str_detect(transmission, ""Manual"") ~ ""Manual"","
+"0","    str_detect(transmission, ""Auto"") ~ ""Automatic"""
+"0","  ))"

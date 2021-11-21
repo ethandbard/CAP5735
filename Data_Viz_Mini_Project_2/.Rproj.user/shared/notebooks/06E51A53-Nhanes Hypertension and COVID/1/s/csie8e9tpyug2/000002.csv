@@ -1,0 +1,8 @@
+"0","```r
+for (i in 1:dim(nhanes)) {
+  seqn <- nhanes$SEQN[i]
+  if (seqn %in% num_i10$SEQN) {
+    nhanes$num_i10[nhanes$SEQN == seqn] <- num_i10$n[num_i10$SEQN == seqn]
+  }
+}
+```"

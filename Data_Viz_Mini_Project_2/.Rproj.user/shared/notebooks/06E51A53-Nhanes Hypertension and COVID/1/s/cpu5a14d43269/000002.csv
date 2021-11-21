@@ -1,0 +1,13 @@
+"0","```r
+as.data.frame(table(nhanes$RIDRETH3[nhanes$RXDUSE_n == 1 & nhanes$num_i10 >= 1], nhanes$num_i10[nhanes$RXDUSE_n == 1 & nhanes$num_i10 >= 1])) %>% mutate(perc = percent(Freq / 1348)) %>%
+  filter(Var1 == \"Non-Hispanic Black\") %>% 
+  arrange(-Freq) %>% 
+  gt() %>% 
+    tab_header(
+     title = md(\"Number of I10 Prescriptions per Individual, Non-Hispanic Black, 2013-2018\"),
+     subtitle = md(\"N = 1348\")) %>% 
+    cols_label(
+      Var1 = \"Ethnic Group\",
+      Var2 = \"Number of Prescriptions\"
+    )  
+```"

@@ -1,0 +1,12 @@
+"0","```r
+#education leads to greater risk of heart attack?
+as.data.frame(table(NonHispanicBlack$education..12yr., NonHispanicBlack$MCQ160E)) %>% 
+  mutate(perc = paste0(round(Freq / nrow(NonHispanicBlack) * 100, 2), \"%\")) %>% 
+  arrange(-Freq) %>% 
+  gt() %>% 
+  tab_header(
+    title = md(\"<12 year education and heart attack prevalence - Black\")) %>% 
+  cols_label(Var1 = \"<12 year education\",
+             Var2 = \"Heart attack prevalence\",
+             Freq = \"Count\")
+```"

@@ -1,0 +1,17 @@
+"0","```r
+coronary <- nhanes %>% filter(MCQ160C == 1)
+coronary_white <- coronary %>% filter(RIDRETH3 == \"Non-Hispanic White\")
+coronary_black <- coronary %>% filter(RIDRETH3 == \"Non-Hispanic Black\")
+
+angina <- nhanes %>% filter(MCQ160D == 1)
+angina_white <- angina %>% filter(RIDRETH3 == \"Non-Hispanic White\")
+angina_black <- angina %>% filter(RIDRETH3 == \"Non-Hispanic Black\")
+
+heart <- nhanes %>% filter(MCQ160E == 1)
+heart_white <- heart %>% filter(RIDRETH3 == \"Non-Hispanic White\")
+heart_black <- heart %>% filter(RIDRETH3 == \"Non-Hispanic Black\")
+
+stroke <- nhanes %>% filter(MCQ160F == 1)
+stroke_white <- stroke %>% filter(RIDRETH3 == \"Non-Hispanic White\")
+stroke_black <- stroke %>% filter(RIDRETH3 == \"Non-Hispanic Black\")
+```"

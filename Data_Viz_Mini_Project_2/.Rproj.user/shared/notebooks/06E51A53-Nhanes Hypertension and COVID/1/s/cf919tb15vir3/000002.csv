@@ -1,0 +1,10 @@
+"0","```r
+rxq <- rxq %>% 
+mutate(RXDDRUG1 = word(RXDDRUG, 1, sep = \"; \"))
+
+rxq <- rxq %>% 
+mutate(RXDDRUG2 = word(RXDDRUG, 2, sep = \"; \"))
+
+rxq %>% 
+  select(c(SEQN, RXDDRUG, RXDDRUG1, RXDDRUG2))
+```"

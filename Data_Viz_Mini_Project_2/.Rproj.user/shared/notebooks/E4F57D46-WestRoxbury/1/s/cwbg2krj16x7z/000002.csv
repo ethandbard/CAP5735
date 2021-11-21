@@ -1,0 +1,2 @@
+"0","houses_smaller <- houses %>% "
+"0","  select(TOTAL_VALUE, FLOORS, ROOMS, BEDROOMS, KITCHEN, FIREPLACE, REMODEL, FULL_BATH, HALF_BATH)"

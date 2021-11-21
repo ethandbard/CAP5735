@@ -1,0 +1,19 @@
+"0","```r
+#Are people with hypertension taking any prescription? insured vs uninsured
+as.data.frame(table(bp_white$HIQ011, bp_white$RXDUSE_n)) %>% 
+  arrange(-Freq) %>% 
+  filter(Var1 %in% c(1,2), Var2 %in% c(1,2)) %>% 
+  mutate(perc = paste0(round(Freq / nrow(bp_white) * 100, 2),\"%\")) %>% 
+    mutate(Var1 = case_when(
+    Var1 == 1 ~ \"Yes\",
+    Var1 == 2 ~ \"No\",
+  )) %>% 
+  mutate(Var2 = case_when(
+    Var2 == 1 ~ \"Yes\",
+    Var2 == 2 ~ \"No\"
+  )) %>% 
+  gt() %>% 
+  tab_header(title = md(\"Are people with hypertension currently using RX? Insured vs Uninsured, Non-Hispanic White\")) %>% 
+  cols_label(Var1 = \"Insured?\",
+             Var2 = \"Taking RX\")
+```"

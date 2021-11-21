@@ -1,0 +1,4 @@
+"0","house_coefs <- tidy(house_model, conf.int = TRUE) %>% "
+"0","  filter(term != ""(Intercept)"")"
+"0",""
+"0","house_coefs"

@@ -1,0 +1,12 @@
+"0","```r
+#White hypertension
+as.data.frame(table(df_white$age_group[df_white$RXDRSC1 == \"I10\"], df_white$hypertensive_rx[df_white$RXDRSC1 == \"I10\"])) %>% mutate(percent = percent(Freq / 2718)) %>% 
+  arrange(-Freq) %>% 
+  gt() %>% 
+  tab_header(
+    title = md(\"Hypertensive Drug Prevalence Non-Hispanic White 2013-2018\"),
+    subtitle = md(\"N = 2718\")) %>%  
+  cols_label(Var1 = \"Age Group\",
+             Var2 = \"Drug\",
+             Freq = \"Count\")
+```"

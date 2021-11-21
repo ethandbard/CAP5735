@@ -1,0 +1,5 @@
+"0","```r
+#merge dataset cycles
+nhanes <- rbind(nhanes14, nhanes16, nhanes18)
+rxq <- rbind(rxq14, rxq16, rxq18)
+```"

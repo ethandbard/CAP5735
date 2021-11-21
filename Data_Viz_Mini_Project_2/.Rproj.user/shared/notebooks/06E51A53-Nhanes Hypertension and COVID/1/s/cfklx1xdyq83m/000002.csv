@@ -1,0 +1,22 @@
+"0","```r
+#For those who have hypertension, how many people are taking prescription? white vs. black?
+myDf <- nhanes %>% 
+  filter(RIDRETH3 %in% c(\"Non-Hispanic White\", \"Non-Hispanic Black\"), BPQ020 == 1)
+
+myDf <- as.data.frame(table(myDf$RIDRETH3, myDf$BPQ040A)) %>% 
+  arrange(-Freq) %>% 
+  group_by(Var1) %>% 
+  mutate(Percent = percent(Freq / sum(Freq))) %>% 
+  mutate(Var2 = case_when(
+    Var2 == 1 ~ \"Yes\",
+    Var2 == 2 ~ \"No\",
+    Var2 == 7 ~ \"Refused\",
+    Var2 == 9 ~ \"Don't Know\"
+  ))
+
+myDf %>% 
+  gt() %>% 
+  cols_label(Var1 = \"Ethnicity\",
+             Var2 = \"Taking Rx for Hypertension\") %>% 
+  tab_header(title = \"For Those With Hypertension, How Many Are Taking Prescription?\")
+```"

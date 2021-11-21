@@ -1,0 +1,4 @@
+"0","```r
+#normalize dataset
+data[,c('LBDGLUSI', 'calories', 'totalFat', 'ALQ130')] <- as.data.frame(scale(data[,c('LBDGLUSI', 'calories', 'totalFat', 'ALQ130')]))
+```"

@@ -1,0 +1,31 @@
+"0","```r
+#Are people taking any prescription? insured vs uninsured
+myDf <- as.data.frame(table(stroke_white$HIQ011, stroke_white$RXDUSE_n)) %>% 
+  arrange(-Freq) %>% 
+  filter(Var1 %in% c(1,2)) %>% 
+  mutate(Var1 = case_when(
+    Var1 == 1 ~ \"Insured\",
+    Var1 == 2 ~ \"Uninsured\"
+  )) %>% 
+  mutate(Var2 = case_when(
+    Var2 == 1 ~ \"Yes\",
+    Var2 == 2 ~ \"No\"
+  )) 
+
+ggplot(myDf, aes(fill = Var2, y = Freq, x = reorder(Var2, -Freq))) +
+  geom_bar(stat = \"identity\", width = 0.5, colour = \"black\") +
+  scale_fill_viridis(discrete = T, option = \"E\") +
+  ggtitle(label = \"Non-Hispanic White Participants Who Have had a Stroke\") + 
+  facet_wrap(~Var1) + 
+  theme_minimal() +
+  theme(legend.position = \"none\",
+        plot.subtitle = element_text(hjust = 0.5)) + 
+  xlab(\"Currently Taking RX\") +
+  ylab(\"Count\") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 0.5)) +
+  geom_text(aes(label = Freq,), position = position_stack(vjust=0.5)) + 
+#  geom_text(aes(label = percent(round(Freq/nrow(myDf), 3))), position = position_stack(vjust=0.5)) +
+  scale_fill_brewer(palette = \"Pastel1\")
+```"
+"1","Scale for 'fill' is already present. Adding another scale for 'fill', which will replace the existing scale.
+"

@@ -1,0 +1,7 @@
+"0","```r
+#number of drugs prescribed per individual
+seqn_counts <- df %>% 
+  select(c(SEQN,RXDUSE)) %>% 
+  group_by(SEQN) %>% 
+  count()
+```"

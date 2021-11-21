@@ -1,0 +1,13 @@
+"0","```r
+bp_white %>% 
+  count(RXDUSE_n) %>% 
+  mutate(perc = n / nrow(bp_white)) -> bp2
+
+ggplot(bp2, aes(x = as.factor(RXDUSE_n), y = perc, fill = as.factor(RXDUSE_n))) + 
+  geom_bar(stat = \"identity\", show.legend = FALSE, colour = \"Black\") + 
+  labs(x = \"Taking Rx? (RXDUSE)\",y = \"Percent\", title = \"Non-Hispanic White Participants With Hypertension\") +
+  geom_text(aes(label = percent(perc)), position = position_stack(vjust=0.5)) +
+  theme_classic() + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_fill_brewer(palette = \"Pastel1\")
+```"

@@ -1,0 +1,6 @@
+"0","ggplot(houses, aes(TOTAL_VALUE)) + "
+"0","  geom_histogram(binwidth = 10, color = ""black"", fill = ""gray"") + "
+"0","  theme_minimal() + "
+"0","  xlab(""Total Value (Thousands)"") + "
+"0","  ylab("""") +"
+"0","  ggtitle(""West Roxbury Housing Prices"")"

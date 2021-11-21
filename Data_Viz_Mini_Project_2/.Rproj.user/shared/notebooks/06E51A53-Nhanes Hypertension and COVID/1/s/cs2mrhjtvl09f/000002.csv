@@ -1,0 +1,7 @@
+"0","```r
+#total number of prescribed drugs per individual
+for (i in 1:dim(df)) {
+  seqn <- df$SEQN[i]
+  nhanes$RXDUSE_n[nhanes$SEQN == seqn] <- unique(df$RXDUSE[df$SEQN == seqn])
+}
+```"

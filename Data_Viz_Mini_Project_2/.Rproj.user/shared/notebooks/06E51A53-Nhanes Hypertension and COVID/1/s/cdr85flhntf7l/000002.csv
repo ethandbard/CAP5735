@@ -1,0 +1,13 @@
+"0","```r
+myDf <- nhanes %>% 
+  filter(RIDRETH3 %in% c(\"Non-Hispanic White\", \"Non-Hispanic Black\"), I10 %in% c(\"One\", \"More Than One\"))
+
+#create and view contingency table
+i10_race <- table(myDf$I10, myDf$RIDRETH3)
+i10_race
+```"
+"1","               
+                Non-Hispanic Black Non-Hispanic White
+  More Than One                608                674
+  One                          740               1153
+"

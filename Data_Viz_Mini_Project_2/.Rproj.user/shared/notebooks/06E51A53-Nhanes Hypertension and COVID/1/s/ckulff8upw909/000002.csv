@@ -1,0 +1,5 @@
+"0","```r
+#Create dataframes by race
+df_white <- df %>% filter(RIDRETH3 == \"Non-Hispanic White\")
+df_black <- df %>% filter(RIDRETH3 == \"Non-Hispanic Black\")
+```"

@@ -1,0 +1,36 @@
+"0","```r
+summary(data)
+```"
+"1","   RIAGENDR       RIDAGEYR       DMDEDUC2           DMDMARTL                       RIDRETH1       MCQ160E          MCQ180E         
+ Female:2525   Min.   :20.00   Length:4522        Length:4522        Mexican American  : 779   Min.   :0.00000   Length:4522       
+ Male  :1997   1st Qu.:36.00   Class :character   Class :character   Non-Hispanic black: 987   1st Qu.:0.00000   Class :character  
+               Median :52.00   Mode  :character   Mode  :character   Non-Hispanic white:2233   Median :0.00000   Mode  :character  
+               Mean   :51.62                                         Other Hispanic    : 523   Mean   :0.04578                     
+               3rd Qu.:67.00                                                                   3rd Qu.:0.00000                     
+               Max.   :80.00                                                                   Max.   :1.00000                     
+                                                                                                                                   
+    MCQ160F          MCQ180F              SSD044          LBDGLUSI            ALQ130            DR1TKCAL        DR2TKCAL       DR1TTFAT     
+ Min.   :0.00000   Length:4522        Min.   :  0.00   Min.   :-2.76587   Min.   :-0.99595   Min.   :    0   Min.   :   0   Min.   :  0.00  
+ 1st Qu.:0.00000   Class :character   1st Qu.:  2.00   1st Qu.:-0.62188   1st Qu.:-0.99595   1st Qu.: 1337   1st Qu.:1248   1st Qu.: 43.61  
+ Median :0.00000   Mode  :character   Median : 30.86   Median : 0.04932   Median :-0.04239   Median : 1782   Median :1680   Median : 64.73  
+ Mean   :0.04755                      Mean   : 33.72   Mean   : 0.00000   Mean   : 0.00000   Mean   : 1896   Mean   :1781   Mean   : 70.50  
+ 3rd Qu.:0.00000                      3rd Qu.: 52.00   3rd Qu.: 0.58532   3rd Qu.: 0.91118   3rd Qu.: 2352   3rd Qu.:2238   3rd Qu.: 91.36  
+ Max.   :1.00000                      Max.   :156.00   Max.   : 2.99730   Max.   : 2.81830   Max.   :12823   Max.   :4677   Max.   :601.33  
+                                                                                             NA's   :429     NA's   :960    NA's   :429     
+    DR2TTFAT         PFQ049             SMQ020             SMQ040             HUQ010             BPQ020           ageGroup         attendance  
+ Min.   :  0.00   Length:4522        Length:4522        Length:4522        Length:4522        Length:4522        20-59:2889   Non-Weekly:3999  
+ 1st Qu.: 39.66   Class :character   Class :character   Class :character   Class :character   Class :character   60+  :1633   Weekly    : 523  
+ Median : 59.42   Mode  :character   Mode  :character   Mode  :character   Mode  :character   Mode  :character                                 
+ Mean   : 65.37                                                                                                                                
+ 3rd Qu.: 84.74                                                                                                                                
+ Max.   :287.37                                                                                                                                
+ NA's   :960                                                                                                                                   
+    calories          totalFat        education..12yr.    married     mobilityLimitation poorHealth  hypertension smoker     high.glucose      
+ Min.   :-2.7260   Min.   :-2.42367   no  :3149        Single :1978   No  :3854          no  :4283   No  :2900    No :3607   Length:4522       
+ 1st Qu.:-0.6930   1st Qu.:-0.70996   yes :1368        Married:2542   Yes : 665          yes : 237   Yes :1619    Yes: 915   Class :character  
+ Median :-0.1125   Median :-0.06191   NA's:   5        NA's   :   2   NA's:   3          NA's:   2   NA's:   3               Mode  :character  
+ Mean   : 0.0000   Mean   : 0.00000                                                                                                            
+ 3rd Qu.: 0.7059   3rd Qu.: 0.63642                                                                                                            
+ Max.   : 2.9361   Max.   : 2.74394                                                                                                            
+                                                                                                                                               
+"

@@ -1,0 +1,8 @@
+"0","```r
+#Create categorical variable \"high.glucose\"
+data <- data %>% 
+  mutate(high.glucose = case_when(
+    LBDGLUSI >= 6.5 ~ \"Yes\",
+    LBDGLUSI < 6.5 ~ \"No\"
+  ))
+```"

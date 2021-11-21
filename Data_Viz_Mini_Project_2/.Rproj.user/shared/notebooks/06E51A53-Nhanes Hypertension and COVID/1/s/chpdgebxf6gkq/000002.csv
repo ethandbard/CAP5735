@@ -1,0 +1,15 @@
+"0","```r
+myDf <- as.data.frame(table(nhanes$RIDRETH3[nhanes$RXDUSE == 1], nhanes$num_i10[nhanes$RXDUSE == 1])) %>% 
+  filter(Var1 == \"Non-Hispanic White\") %>% 
+  arrange(-Freq)
+
+ggplot(myDf, aes(fill = Var2, x = reorder(Var2, -Freq), y = Freq, label = percent(Freq / 1827))) +
+  geom_bar(stat = \"identity\", width = 0.5, colour = \"black\") +
+  ggtitle(\"Number of I10 Prescriptions per Individual, Non-Hispanic White, 2013-2018\") +
+  theme_minimal() +
+  theme(legend.position = \"none\") +
+  xlab(\"Number of I10 Drugs Prescribed\") +
+  ylab(\"Count (Individuals)\") +
+  geom_text(aes(label = percent(Freq / 1827)), position = position_stack(vjust=0.5)) +
+  scale_fill_brewer(palette = \"Pastel1\")
+```"

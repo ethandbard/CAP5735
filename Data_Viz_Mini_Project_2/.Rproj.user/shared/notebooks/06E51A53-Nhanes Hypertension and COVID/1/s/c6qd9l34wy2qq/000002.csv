@@ -1,0 +1,20 @@
+"0","```r
+#Drug Prevalence by Age, black
+myDf <- as.data.frame(table(df_black$age_group[df_black$RXDRSC1 == \"I10\"], df_black$hypertensive_rx[df_black$RXDRSC1 == \"I10\"])) %>% 
+  arrange(-Freq)
+
+ggplot(myDf, aes(fill = Var2, y = Freq, x = reorder(Var2, -Freq))) +
+  geom_bar(stat = \"identity\", width = 0.5, colour = \"black\") +
+  scale_fill_viridis(discrete = T, option = \"E\") +
+  ggtitle(\"Hypertensive Drug Prevalence by Age Group, Non-Hispanic Black 2013-2018\") + 
+  facet_wrap(~Var1) + 
+  theme_minimal() +
+  theme(legend.position = \"none\") + 
+  xlab(\"\") +
+  ylab(\"Count\") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 0.5)) +
+  geom_text(aes(label = percent(round(Freq/2230, 3))), position = position_stack(vjust=0.5)) +
+  scale_fill_brewer(palette = \"Pastel1\")
+```"
+"1","Scale for 'fill' is already present. Adding another scale for 'fill', which will replace the existing scale.
+"

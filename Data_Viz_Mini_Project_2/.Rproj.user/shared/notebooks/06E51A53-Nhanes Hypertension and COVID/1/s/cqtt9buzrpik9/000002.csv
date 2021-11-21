@@ -1,0 +1,4 @@
+"0","```r
+#Join rxq and nhanes for demographic analysis
+df <- left_join(rxq, nhanes, by = \"SEQN\") %>% filter(age_group != \"20 and Under\")
+```"

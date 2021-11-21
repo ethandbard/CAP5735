@@ -1,0 +1,14 @@
+"0","```r
+bp <- df_white %>% filter(BPQ020 == 1 & BPQ050A == 1  & RXDUSE == 1 & RXDRSC1 == \"I10\")
+
+bp2 <- as.data.frame(table(bp$RXDDRUG, bp$hypertensive_rx)) %>% arrange(-Freq) %>% head(9)
+#bp2 <- bp2 %>% mutate(perc = percent(Freq / sum(Freq))) %>% head(9)
+
+ggplot(bp2, aes(x = as.factor(reorder(Var1,-Freq)), y = as.numeric(Freq), fill = Var2)) + 
+  geom_bar(stat = \"identity\", show.legend = TRUE, colour = \"Black\") + 
+  labs(x = \"Drug Prescribed\",y = \"Count\", title = \"Prescriptions for White Participants With Hypertension\", fill = \"Cateogory\") +
+  geom_text(aes(label = percent(Freq / nrow(bp))), position = position_stack(vjust=0.5)) +
+  theme_classic() + 
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 0.5)) +
+  scale_fill_brewer(palette = \"Pastel1\")
+```"

@@ -1,0 +1,18 @@
+"0","```r
+#Heart Attack Models
+
+#Mexican American
+MexicanAmericanHeart <- glm(MCQ160E ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = MexicanAmerican, family = \"binomial\")
+
+#Other Hispanic
+OtherHispanicHeart <- glm(MCQ160E ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = OtherHispanic, family = \"binomial\")
+
+#Non hispanic black
+NonHispanicBlackHeart <- glm(MCQ160E ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = NonHispanicBlack, family = \"binomial\")
+
+#non hispanic white
+NonHispanicWhiteHeart <- glm(MCQ160E ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = NonHispanicWhite, family = \"binomial\")
+
+#all
+dataHeart <- glm(MCQ160E ~ RIAGENDR + ageGroup + attendance + calories + LBDGLUSI + ALQ130 + education..12yr. + married + mobilityLimitation + poorHealth + hypertension + smoker, data = data, family = \"binomial\")
+```"

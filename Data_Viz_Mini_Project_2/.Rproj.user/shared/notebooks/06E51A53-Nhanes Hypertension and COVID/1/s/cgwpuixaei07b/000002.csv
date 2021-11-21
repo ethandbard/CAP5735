@@ -1,0 +1,18 @@
+"0","```r
+#is race a factor in how patients are treated?
+Categories <- c(\"ACE\", \"AB\", \"ARB\", \"BB\", \"CCB\", \"diuretic\")
+means <- c(mean(bp_black$ACE), mean(bp_black$AB), mean(bp_black$ARB), mean(bp_black$BB), mean(bp_black$CCB), mean(bp_black$diuretic))
+
+df <- data.frame(Categories, means)
+df %>% 
+  ggplot(aes(x = reorder(Categories, -means), y = means, label = means, fill = Categories)) +
+  geom_bar(stat = \"identity\", width = 0.5, colour = \"black\") +
+  ggtitle(\"Average Number of I10 Categories Per Individual, Non-Hispanic Black, 2013-2018\") +
+  theme_minimal() +
+  theme(legend.position = \"none\") +
+  xlab(\"Number of I10 Drugs Prescribed\") +
+  ylab(\"Count (Individuals)\") +
+  geom_text(aes(label = round(means,2)), position = position_stack(vjust=0.5)) +
+  scale_fill_brewer(palette = \"Pastel1\")
+
+```"

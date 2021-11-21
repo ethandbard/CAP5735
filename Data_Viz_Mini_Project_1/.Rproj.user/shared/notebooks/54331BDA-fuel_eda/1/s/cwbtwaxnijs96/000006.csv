@@ -1,0 +1,9 @@
+"0","fuel %>% "
+"0","  ggplot() +"
+"0","  geom_histogram(aes(x = annual_fuel_cost_ft1)) + "
+"0","  theme_minimal() + "
+"0","  xlab(""Annual Fuel Cost"") + "
+"0","  ylab(""Count"") + "
+"0","  ggtitle(""Distribution of Estimated Annual Fuel Cost"")"
+"2","`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+"

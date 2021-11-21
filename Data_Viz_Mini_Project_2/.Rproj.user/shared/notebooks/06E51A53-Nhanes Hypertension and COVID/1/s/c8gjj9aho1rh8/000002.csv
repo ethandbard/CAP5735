@@ -1,0 +1,20 @@
+"0","```r
+#white participants with hypertension, prevalence of drug type 
+bp <- df_white %>% filter(BPQ020 == 1 & BPQ050A == 1  & RXDUSE == 1 & RXDRSC1 == \"I10\")
+
+bp %>% 
+  count(hypertensive_rx) %>% 
+  mutate(perc = n / nrow(bp)) -> bp2 
+
+bp2 <- bp2 %>% 
+  arrange(desc(n)) %>% 
+  head(10)
+
+ggplot(bp2, aes(x = as.factor(reorder(hypertensive_rx, -perc)), y = perc, fill = as.factor(hypertensive_rx))) + 
+  geom_bar(stat = \"identity\", show.legend = FALSE, colour = \"Black\") + 
+  labs(x = \"Drug Prescribed\",y = \"Percent\", title = \"White Participants With Hypertension\") +
+  geom_text(aes(label = percent(perc)), position = position_stack(vjust=0.5)) +
+  theme_classic() + 
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 0.5)) +
+  scale_fill_brewer(palette = \"Pastel1\")
+```"

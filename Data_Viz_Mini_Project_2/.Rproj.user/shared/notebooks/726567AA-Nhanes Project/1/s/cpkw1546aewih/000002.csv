@@ -1,0 +1,8 @@
+"0","```r
+htmlreg(list(MexicanAmericanStroke, OtherHispanicStroke, NonHispanicBlackStroke, NonHispanicWhiteStroke),
+          stars = 0.05,
+          digits = 2,
+          custom.model.names = c(\"Mexican American\", \"Other Hispanic\", \"Non-Hispanic Black\", \"Non-Hispanic White\"),
+        #  custom.coef.names = c(\"Intercept\", 
+        ci.force = TRUE)
+```"

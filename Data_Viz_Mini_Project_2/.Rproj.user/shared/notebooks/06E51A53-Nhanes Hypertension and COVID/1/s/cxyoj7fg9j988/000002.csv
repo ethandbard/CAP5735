@@ -1,0 +1,5 @@
+"0","```r
+rxq %>% 
+  filter(RXDRSC1 == \"I10\") %>% 
+  select(c(RXDDRUG1, RXDDRUG2, hypertensive_rx, hypertensive_rx2))
+```"

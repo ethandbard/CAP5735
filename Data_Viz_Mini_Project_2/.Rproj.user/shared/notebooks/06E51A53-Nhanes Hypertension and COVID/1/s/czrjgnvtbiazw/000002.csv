@@ -1,0 +1,10 @@
+"0","```r
+bp <- nhanes %>% 
+  filter(BPQ020 == 1)
+
+bp_white <- bp %>% 
+  filter(RIDRETH3 == \"Non-Hispanic White\")
+
+bp_black <- bp %>% 
+  filter(RIDRETH3 == \"Non-Hispanic Black\")
+```"
